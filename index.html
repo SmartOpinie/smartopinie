@@ -6,45 +6,98 @@
 <title>SmartOpinie</title>
 
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 body{
-background-image:url("62241C34-A8F0-4566-A593-6C3A3F19444E.png");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-font-family:Arial;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
+    background-image:url("62241C34-A8F0-4566-A593-6C3A3F19444E.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
 .card{
-background:rgba(255,255,255,0.12);
-backdrop-filter:blur(10px);
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-text-align:center;
-width:320px;
-color:white;
+    background:rgba(255,255,255,.14);
+    backdrop-filter:blur(18px);
+    padding:40px 30px;
+    border-radius:24px;
+    width:340px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+    border:1px solid rgba(255,255,255,.18);
+
+    opacity:0;
+    transform:translateY(25px);
+    animation:fadeUp .8s forwards;
 }
 
 h1{
-margin-bottom:30px;
+    margin-bottom:10px;
+    font-size:34px;
 }
 
-a{
-display:block;
-margin:15px 0;
-padding:15px;
-border-radius:12px;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-background:#4285F4;
-color:white;
+.subtitle{
+    margin-bottom:28px;
+    color:rgba(255,255,255,.9);
 }
+
+.button{
+    display:block;
+    margin:14px 0;
+    padding:16px;
+    border-radius:16px;
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    background:rgba(255,255,255,.16);
+    transition:.3s;
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp .7s forwards;
+}
+
+.button:nth-of-type(1){animation-delay:.4s;}
+.button:nth-of-type(2){animation-delay:.6s;}
+.button:nth-of-type(3){animation-delay:.8s;}
+.button:nth-of-type(4){animation-delay:1s;}
+
+.button:hover{
+    transform:translateY(-4px) scale(1.03);
+    background:rgba(255,255,255,.25);
+}
+
+.button:active{
+    transform:scale(.97);
+}
+
+.google{
+    background:#fbbc05;
+    color:#202124;
+    box-shadow:0 0 20px rgba(251,188,5,.45);
+}
+
+.google:hover{
+    background:#ffd54f;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 </style>
 
 </head>
@@ -53,15 +106,36 @@ color:white;
 
 <div class="card">
 
-<h1>Sprawdź nas!</h1>
+<h1>👋 Sprawdź nas!</h1>
 
-<a href="https://search.google.com/local/writereview?placeid=ChIJlcLr2dEKEEcRGQi15b_sxjU" target="_blank">⭐ Dodaj opinię</a>
+<p class="subtitle">
+Dziękujemy za odwiedziny.<br>
+Wybierz jedną z opcji poniżej.
+</p>
 
-<a href="https://instagram.com/smartopinie" target="_blank">📷 Instagram</a>
+<a class="button google"
+href="https://search.google.com/local/writereview?placeid=ChIJlcLr2dEKEEcRGQi15b_sxjU"
+target="_blank">
+⭐ Dodaj opinię
+</a>
 
-<a href="https://www.facebook.com/share/19QvWJR1xX/?mibextid=wwXIfr" target="_blank">👍 Facebook</a>
+<a class="button"
+href="https://instagram.com/smartopinie"
+target="_blank">
+📷 Instagram
+</a>
 
-<a href="https://smartopinie.my.canva.site/" target="_blank">🌐 Strona WWW</a>
+<a class="button"
+href="https://www.facebook.com/share/19QvWJR1xX/?mibextid=wwXIfr"
+target="_blank">
+👍 Facebook
+</a>
+
+<a class="button"
+href="https://smartopinie.my.canva.site/"
+target="_blank">
+🌐 Strona WWW
+</a>
 
 </div>
 
